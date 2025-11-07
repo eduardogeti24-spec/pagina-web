@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de Aguinaldo</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="card shadow-lg">
+      <div class="card-header bg-dark text-warning text-center">
+        <h3>Calculadora de Aguinaldo</h3>
+      </div>
+      <div class="card-body">
+        <form id="aguinaldoForm">
+          <div class="mb-3">
+            <label for="nombre" class="form-label fw-semibold">Nombre del Empleado</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan Pérez" required aria-label="Nombre del Empleado">
+          </div>
+          <div class="mb-3">
+            <label for="sueldo" class="form-label fw-semibold">Sueldo mensual base ($)</label>
+            <input type="number" class="form-control" id="sueldo" min="0" step="0.01" required aria-label="Sueldo mensual">
+          </div>
+          <div class="mb-4">
+            <label for="meses" class="form-label fw-semibold">Tiempo en la empresa</label>
+            <input type="number" class="form-control" id="meses" min="1" required aria-label="Meses trabajados">
+          </div>
+          <button type="submit" class="btn btn-warning w-100 fw-bold">Calcular Pago de Diciembre</button>
+        </form>
+      </div>
+      <div class="card-footer">
+        <h5 class="text-center mb-3">Resumen del Pago</h5>
+        <div id="resultado" class="alert alert-info text-dark" role="alert">
+          Ingrese los datos para calcular el pago...
+        </div>
+      </div> </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
